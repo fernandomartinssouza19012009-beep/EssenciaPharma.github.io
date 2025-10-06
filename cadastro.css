@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #002147;
+    /* Azul escuro de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.login-container {
+    background-color: #fff;
+    border-radius: 16px;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Lado esquerdo - Formulário */
+.login-esquerda {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* Lado direito - Imagem */
+.login-direita {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.login-direita img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 80px;
+}
+
+/* Abas Entrar / Cadastrar */
+.tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border: 2px solid #0057b8;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background-color: transparent;
+    color: #0057b8;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs .active {
+    background-color: #0057b8;
+    color: #fff;
+}
+
+/* Campos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Link de esquecimento de senha */
+.forgot-password {
+    font-size: 13px;
+    color: #0057b8;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Botões */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #e7e7e7;
+    color: #333;
+}
+
+.btn-google {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333;
+}
+
+.btn-google i {
+    color: #db4437;
+    font-size: 18px;
+}
+
+/* Linha divisória com “ou” */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+    font-size: 14px;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    width: 40%;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Esconde os formulários que não estão ativos */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-direita {
+        display: none;
+    }
+
+    .login-esquerda {
+        padding: 30px 20px;
+    }
+}
