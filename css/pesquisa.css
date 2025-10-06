@@ -1,0 +1,154 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #f4f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #1d3557;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 40px; /*Afasta o elemento da esquerda*/
+}
+
+.menu p a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu p a:hover {
+    color: #a8dadc;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.social {
+    background-color: #457b9d; /* Cor de fundo */
+    color: white; /* Cor do ícone */
+    padding: 10px;
+    border-radius: 50%; /* Deixa o fundo redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social:hover {
+    background-color: #1d3557; /* Cor ao passar o mouse */
+}
+
+/* Container da seção de pesquisa */
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Título centralizado */
+.search-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Barra de pesquisa centralizada e arredondada */
+#campo-pesquisa {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#campo-pesquisa:focus {
+    border-color: #1d3557;
+    box-shadow: 0 0 8px rgba(29, 53, 87, 0.3);
+}
+
+/* Resultados (se tiver) */
+#resultados {
+    margin-top: 20px;
+}
+
+/* Rodapé fixado no fundo */
+.footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.copy {
+    font-size: 14px;
+}
+
+
+
+/* Rodapé */
+.footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.copy {
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 15px;
+    }
+
+    .content, .text {
+        padding: 0 10px;
+    }
+}
+

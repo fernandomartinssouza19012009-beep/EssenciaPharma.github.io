@@ -1,0 +1,164 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #bbdefb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #1d3557;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 40px; /*Afasta o elemento da esquerda*/
+}
+
+.menu p a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu p a:hover {
+    color: #a8dadc;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.social {
+    background-color: #457b9d; /* Cor de fundo */
+    color: white; /* Cor do ícone */
+    padding: 10px;
+    border-radius: 50%; /* Deixa o fundo redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social:hover {
+    background-color: #1d3557; /* Cor ao passar o mouse */
+}
+/*ATÉ AQUI VAI SER PADRÃO PARA TODAS AS PÁGINAS*/
+
+
+/*SEÇÃO PARA A "SOBRE A ESSENCIA PHARMA"*/
+.about {
+    padding: 50px 20px;
+    background-color: #f4f9f9;
+}
+
+/*ESTILIZAÇÃO DA IMAGEM E DO TEXTO*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*max-width: 400px; → Define que a imagem nunca vai passar de 400px de largura.
+
+width: 100%; → Permite que ela ainda seja responsiva em telas pequenas.
+
+height: auto; → Mantém a proporção da imagem.*/
+
+.image img {
+    max-width: 600px; /* ou 300px se quiser menor */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h3 {
+    font-size: 28px;
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Missão, Visão e Valores */
+.text {
+    padding: 20px 20px 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.words {
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #e8f0fe;
+    padding: 15px;
+    border-left: 5px solid #457b9d;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.copy {
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 15px;
+    }
+
+    .content, .text {
+        padding: 0 10px;
+    }
+}
+
+
