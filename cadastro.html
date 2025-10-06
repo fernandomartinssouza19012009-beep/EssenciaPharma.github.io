@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Login </title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- Lado da imagem -->
+        <div class="login-direita">
+            <a href="index.html"><img src="img/Logo.jpg" alt="Produtos exclusivos"></a>
+        </div>
+
+        <!-- Lado dos formulários -->
+        <div class="login-esquerda">
+            <!-- Abas -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">ENTRAR</button>
+                <button class="tab-btn" data-tab="cadastro">CADASTRAR</button>
+            </div>
+
+            <!-- Formulário de Login -->
+            <form class="form login-form active">
+                <div class="form-group">
+                    <label for="email-login">E-mail</label>
+                    <input type="email" id="email-login" placeholder="Ex: exemplo@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha-login">Senha</label>
+                    <input type="password" id="senha-login" placeholder="Digite sua senha">
+                </div>
+
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+
+                <button type="submit" class="btn btn-primary">Entrar</button>
+
+                <div class="divider">ou</div>
+
+                <button type="button" class="btn btn-google">
+                    <i class="fab fa-google"></i>
+                    Entrar com Google
+                </button>
+            </form>
+
+            <!-- Formulário de Cadastro -->
+            <form class="form cadastro-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Número de telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="email-cadastro">E-mail</label>
+                    <input type="email" id="email-cadastro" placeholder="Ex: exemplo@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha-cadastro">Senha</label>
+                    <input type="password" id="senha-cadastro" placeholder="Crie uma senha">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar senha</label>
+                    <input type="password" id="confirmar-senha" placeholder="Repita sua senha">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+                <div class="divider">ou</div>
+
+                <button type="button" class="btn btn-google">
+                    <i class="fab fa-google"></i>
+                    Cadastrar com Google
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Alternar entre Login e Cadastro
+        const tabs = document.querySelectorAll(".tab-btn");
+        const forms = document.querySelectorAll(".form");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                forms.forEach(f => f.classList.remove("active"));
+
+                tab.classList.add("active");
+                document.querySelector(`.${tab.dataset.tab}-form`).classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>

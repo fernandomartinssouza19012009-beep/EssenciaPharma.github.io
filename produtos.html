@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/produto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <!--TAG NAV: usada qdo queremos navegar dentro do SITE-->
+    <header class="header">
+        <div>
+            <a href="index.html" class="logo">
+                <img src="img/imagens/Logo.jpg" alt="">
+            </a>
+        </div>
+        <!--TAG NAV: usada qdo queremos navegar dentro do SITE-->
+        <nav class="menu"> 
+            <div class="hover">
+                <p>
+                    <a href="index.html" title="Página Inicial">HOME</a>
+                    <a href="sobre.html" title="Sobre">SOBRE</a>
+                    <a href="produtos.html" title="Produtos">PRODUTOS</a>
+                </p>
+            </div>
+        </nav>
+    
+        <!-- ÍCONE DA HEADER -->
+        <div class="icons">
+            <a class="social" href="cadastro.html" title="Login"><i class="fas fa-user"></i></a>
+            <a class="social" href="pesquisa.html" title="Buscar"><i class="fas fa-search"></i></a>
+            <a class="social" href="carrinho.html" title="Carrinho"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        
+        </header>
+    
+    <div class="banner">
+        <h1>Nossos Produtos</h1>
+        <p>Confira nossos produtos e encontre tudo o que você precisa com qualidade e preço justo</p>
+    </div>
+    
+    <!--TESTE CARROSSEL-->
+    <div class="container">
+        <!-- Produto 1 -->
+        <div class="product-card">
+            <img src="img/imagens/pantene.webp" alt="Produto 1">
+            <div class="produ-name">Shampoo Pantene Hidratação 500ml</div>
+            <div class="descrição">Cabelo mais limpo e brilhoso.</div>
+            <div class="preço">R$ 19,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Shampoo Pantene', 'R$ 19,90', 'img/imagens/pantene.webp')">Adicionar ao Carrinho</button>
+            </a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product-card">
+            <img src="img/imagens/camomila.jpg" alt="Produto 2">
+            <div class="produ-name">Chá de Camomila Leão</div>
+            <div class="descrição">Indicado para dores musculares.</div>
+            <div class="preço">R$ 29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Chá de Camomila Leão', 'R$ 29,90', 'img/imagens/camomila.jpg')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product-card">
+            <img src="img/imagens/vitamina_c_bio_c_1g_30_comprimidos_efervescentes_sem_acucar_71_1_20200724181355.webp"
+                alt="Produto 3">
+            <div class="produ-name">Vitamina C 100mg</div>
+            <div class="descrição">Suplemento para fortalecer o sistema imunológico.</div>
+            <div class="preço">R$ 39,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Vitamina C', 'R$ 39,90', 'img/imagens/vitamina_c_bio_c_1g_30_comprimidos_efervescentes_sem_acucar_71_1_20200724181355.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="product-card">
+            <img src="img/imagens/anti.webp" alt="Produto 4">
+            <div class="produ-name">Antisséptico Bactericida</div>
+            <div class="descrição">Ideal para limpeza e desinfecção de ferimentos.</div>
+            <div class="preço">R$ 14,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Antisséptico Bactericida', 'R$ 14,90', 'img/imagens/anti.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 5 -->
+        <div class="product-card">
+            <img src="img/imagens/protetor_solar_nivea_sun_fps_50_protect_e_hidrata_100ml_8470_1_bcb61d76b159276743145915bb7193dc.webp"
+                alt="Produto 4">
+            <div class="produ-name">Protetor Solar Nivea Sun</div>
+            <div class="descrição">Protetor Solar Corporal Hidratação FPS 50 Nivea Sun 200ml</div>
+            <div class="preço">R$ 49,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Protetor Sola Nivea Sun', 'R$ 49,90', 'img/imagens/protetor_solar_nivea_sun_fps_50_protect_e_hidrata_100ml_8470_1_bcb61d76b159276743145915bb7193dc.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product-card">
+            <img src="img/imagens/creamy.webp" alt="Produto 4">
+            <div class="produ-name">Creme Facial Creamy</div>
+            <div class="descrição">Creme Hidratante Facial Creamy Skincare Calming Cream 40g</div>
+            <div class="preço">R$52,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Creme Hidratante Facial', 'R$ 52,99', 'img/imagens/creamy.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product-card">
+            <img src="img/imagens/topz.png" alt="Produto 4">
+            <div class="produ-name">Curativo Topz</div>
+            <div class="descrição">Curativo Topz Patrulha Canina 25 Unidades.</div>
+            <div class="preço">R$ 14,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Curativo Topz Patrulha Canina', 'R$ 14,99', 'img/imagens/topz.png')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product-card">
+            <img src="img/imagens/prudence.webp" alt="Produto 4">
+            <div class="produ-name">Camisinha Prudence</div>
+            <div class="descrição">Camisinha Preservativo Prudence Neon com 3 Unidades.</div>
+            <div class="preço">R$ 60,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Camisinha Prudence', 'R$ 69,90', 'img/imagens/prudence.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 7 -->
+        <div class="product-card">
+            <img src="img/imagens/dipirona.webp" alt="Produto 4">
+            <div class="produ-name">Dipirona Monoidratada</div>
+            <div class="descrição">Dipirona Monoidratada 1g Medley - 10 Comprimidos</div>
+            <div class="preço">R$ 17,72</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Dipirona Monoidratada', 'R$ 17,72', 'img/imagens/dipirona.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 8 -->
+        <div class="product-card">
+            <img src="img/imagens/dorflex.jpg" alt="Produto 4">
+            <div class="produ-name">Dorflex</div>
+            <div class="descrição">Dorflex Analgésico e Relaxante Muscular 36 comprimidos</div>
+            <div class="preço">R$18,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Dorflex', 'R$ 18,99', 'img/imagens/dorflex.jpg')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 9 -->
+        <div class="product-card">
+            <img src="img/imagens/anticoncepcional-biovet-preve-gest-5-mg-6621_18849.webp" alt="Produto 4">
+            <div class="produ-name">Opill</div>
+            <div class="descrição">Anticoncepcional Biovet Preve-gest 5 Mg</div>
+            <div class="preço">R$ 38,19</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Anticoncepcional Biovet', 'R$ 38,19', 'img/imagens/anticoncepcional-biovet-preve-gest-5-mg-6621_18849.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 10 -->
+        <div class="product-card">
+            <img src="img/imagens/alprazolam.webp" alt="Produto 4">
+            <div class="produ-name">Alprazolam</div>
+            <div class="descrição">Alprazolam 0,25mg 30 comprimidos Medley Genérico</div>
+            <div class="preço">R$ 60,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Alprazolam', 'R$ 60,90', 'img/imagens/alprazolam.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 11 -->
+        <div class="product-card">
+            <img src="img/imagens/Carmed Hello Kitty.webp" alt="Produto 4">
+            <div class="produ-name">Carmed Hello Kitty</div>
+            <div class="descrição">Hidratante Labial Carmed Hello Kitty Maçã do Amor 10g</div>
+            <div class="preço">R$ 49,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Carmed Hello Kitty', 'R$ 49,90', 'img/imagens/Carmed Hello Kitty.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 12 -->
+        <div class="product-card">
+            <img src="img/imagens/bjs.webp" alt="Produto 4">
+            <div class="produ-name">Carmed Fini Beijos</div>
+            <div class="descrição">Hidratante Labial Carmed Fini Beijos com Cor Efeito Gloss 10g</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Carmed Fini Beijos', 'R$ 29,90', 'img/imagens/bjs.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 13 -->
+        <div class="product-card">
+            <img src="img/imagens/Carmed Melância.webp" alt="Produto 4">
+            <div class="produ-name">Carmed Melância</div>
+            <div class="descrição">Hidratante Labial Carmed Melancia 10G</div>
+            <div class="preço">R$20,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Carmed Melância', 'R$ 20,90', 'img/imagens/Carmed Melância.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <!-- Produto 14 -->
+        <div class="product-card">
+            <img src="img/imagens/Carmed Bauducco.jpg" alt="Produto 4">
+            <div class="produ-name">Carmed Chocottone</div>
+            <div class="descrição">Hidratante Labial Carmed Chocottone Incolor 10g</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Carmed Chocottone', 'R$ 29,90', 'img/imagens/Carmed Bauducco.jpg')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/venus.webp" alt="Produto 4">
+            <div class="produ-name">Gillette Venus</div>
+            <div class="descrição">Aparelho de Depilar Gillette Venus Sensitive Feminino com 2 unidades</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Gilette Venus', 'R$ 29,90', 'img/Imagens Lelê/venus.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/venus pluss.webp" alt="Produto 4">
+            <div class="produ-name">Gillette Venus Recarregável</div>
+            <div class="descrição">Aparelho de Depilar Recarregável Gillette Venus Especial para Área Íntima 1 Unidade</div>
+            <div class="preço">R$44,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Gilette Venus Recarregável', 'R$ 44,90', 'img/Imagens Lelê/venus pluss.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/veet.webp" alt="Produto 4">
+            <div class="produ-name">Veet Facial</div>
+            <div class="descrição">Folha Depilatória Facial Veet Easy-Gelwax 12 folhas</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Veet Facial', 'R$ 29,90', 'img/Imagens Lelê/veet.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/veet pernas.webp" alt="Produto 4">
+            <div class="produ-name">Veet Pure & Fresh</div>
+            <div class="descrição">Creme Depilatório Veet Pure & Fresh Pele Normal 200ml</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Veet Pure & Fresh', 'R$ 29,90', 'img/Imagens Lelê/veet pernas.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/tonicolola.webp" alt="Produto 4">
+            <div class="produ-name">Tônico de Crescimento</div>
+            <div class="descrição">Tônico de Crescimento Lola Cosmetics Rapunzel 250ml</div>
+            <div class="preço">R$29,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Tônico de Crescimento', 'R$ 29,90', 'img/Imagens Lelê/tonicolola.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/salonline.webp" alt="Produto 4">
+            <div class="produ-name">Salon Line Light Color</div>
+            <div class="descrição">Tinta de Cabelo Permanente Suave Salon Line Light Color 66.46 Vermelho Cereja</div>
+            <div class="preço">R$16,59</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Salon Line Light Color', 'R$ 16,59', 'img/Imagens Lelê/salonline.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>  
+        <div class="product-card">
+            <img src="img/Imagens Lelê/need.webp" alt="Produto 4">
+            <div class="produ-name">Needs Beauty</div>
+            <div class="descrição">Cera Depilatória de Microondas Needs Beauty Maracujá 200g</div>
+            <div class="preço">R$27,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Needs Beauty', 'R$ 27,90', 'img/Imagens Lelê/need.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/D_Q_NP_622310-MLU75917063298_042024-O.webp" alt="Produto 4">
+            <div class="produ-name">Racco Depeeling</div>
+            <div class="descrição">Creme Depilatório Racco Depeeling Intimo 150ml</div>
+            <div class="preço">R$79,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Racco Depeeling', 'R$ 79,99', 'img/Imagens Lelê/D_Q_NP_622310-MLU75917063298_042024-O.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="img/Imagens Lelê/natucor.webp" alt="Produto 4">
+            <div class="produ-name">Natu Cor</div>
+            <div class="descrição">Tinta de Cabelo Permanente Embelleze Natucor 2.0 Preto Suave</div>
+            <div class="preço">R$9,75</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Natu Cor', 'R$ 9,75', 'img/Imagens Lelê/natucor.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="img/Imagens Lelê/manteiga modeladora.webp" alt="Produto 4">
+            <div class="produ-name">Lola Butter</div>
+            <div class="descrição">Manteiga Modeladora Plot Twist Nut Butter Cream Lola Cosmetics 480g</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lola Butter', 'R$ 71,99', 'img/Imagens Lelê/manteiga modeladora.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/loreal2.webp" alt="Produto 4">
+            <div class="produ-name">LOréal Paris Castanho Natural</div>
+            <div class="descrição">Tinta de Cabelo Permanente Imédia Excellence L'Oréal Paris Creme - 4 Castanho Natural</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('LÓreal Paris Castanho Natural', 'R$ 71,99', 'img/Imagens Lelê/loreal2.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/loreal.webp" alt="Produto 4">
+            <div class="produ-name">L'Oréal Paris Creme</div>
+            <div class="descrição">Tinta de Cabelo Permanente Imédia Excellence L'Oréal Paris Creme - 6.88 Mel</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('LÓreal Paris Creme', 'R$ 71,99', 'img/Imagens Lelê/loreal.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/lola preto.webp" alt="Produto 4">
+            <div class="produ-name">Lola Morte</div>
+            <div class="descrição">Spray Lola Morte Súbita 250ml</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lola Morte', 'R$ 71,99', 'img/Imagens Lelê/lola preto.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/creme pentear cabelo salon line 39,99.webp" alt="Produto 4">
+            <div class="produ-name">Salon Line Definição Intensa</div>
+            <div class="descrição">Creme de Pentear Salon Line 1kg</div>
+            <div class="preço">39,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Salon Line Definição Intensa', 'R$ 39,99', 'img/Imagens Fefe/creme pentear cabelo salon line 39,99.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/finalizador.webp" alt="Produto 4">
+            <div class="produ-name">Lola Danos</div>
+            <div class="descrição">Leave-In Finalizador Lola Danos Vorazes com 200ml</div>
+            <div class="preço">R$56,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lola Danos', 'R$ 56,99', 'img/Imagens Lelê/finalizador.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/creme protetor.webp" alt="Produto 4">
+            <div class="produ-name">Lola Bemdita</div>
+            <div class="descrição">Creme Protetor Capilar Lola Bemdita Pré e Pós Praia 250g</div>
+            <div class="preço">R$53,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lola Bemdita', 'R$ 53,99', 'img/Imagens Lelê/creme protetor.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/branco liso lola.webp" alt="Produto 4">
+            <div class="produ-name">Lola Cosmetics</div>
+            <div class="descrição">Spray para Cabelo Antifrizz Liso, Leve e Solto Lola Cosmetics com 200ml</div>
+            <div class="preço">R$69,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lola Cosmetics', 'R$ 69,99', 'img/Imagens Lelê/branco liso lola.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/gelatina capilar salon line 27,99.webp" alt="Produto 4">
+            <div class="produ-name">Gelatina Capilar</div>
+            <div class="descrição">Gelatina Capilar Salon Line 550g</div>
+            <div class="preço">R$27,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Gelatina Capilar', 'R$ 27,99', 'img/Imagens Fefe/gelatina capilar salon line 27,99.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/kit creme para pentear salon line kids melancia e uva 93,90.webp" alt="Produto 4">
+            <div class="produ-name">Combo Salon Line Kids</div>
+            <div class="descrição">Kit Creme Para Pentear Salon Line Kids Melância e Uva</div>
+            <div class="preço">R$93,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Combo Salon Line Kids', 'R$ 93,90', 'img/Imagens Fefe/kit creme para pentear salon line kids melancia e uva 93,90.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/salon line creme de pentear infantil 40,00.webp" alt="Produto 4">
+            <div class="produ-name">Salon Line Kids</div>
+            <div class="descrição">Salon Line Creme de Pentear Infantil</div>
+            <div class="preço">R$40,00</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Salon Line Kids', 'R$ 40,00', 'img/Imagens Fefe/salon line creme de pentear infantil 40,00.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/teroura de cabelo enox 15,69.webp" alt="Produto 4">
+            <div class="produ-name">Tesoura de Cabelo</div>
+            <div class="descrição">Tesoura de Cabelo Enox</div>
+            <div class="preço">R$15,69</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Tesoura de Cabelo', 'R$ 15,69', 'img/Imagens Fefe/teroura de cabelo enox 15,69.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/cortador de unha mundial 11,29.webp" alt="Produto 4">
+            <div class="produ-name">Cortador de Unha</div>
+            <div class="descrição">Cortador de Unha Mundial</div>
+            <div class="preço">R$11,29</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Cortador de Unha', 'R$ 11,29', 'img/Imagens Fefe/cortador de unha mundial 11,29.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/creatina dark lab.webp" alt="Produto 4">
+            <div class="produ-name">Creatina Dark Lab</div>
+            <div class="descrição">Creatina Dark Lab</div>
+            <div class="preço">R$70,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Creatina Dark Lab', 'R$ 70,99', 'img/Imagens Fefe/creatina dark lab.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/creatina.webp" alt="Produto 4">
+            <div class="produ-name">Cretina Hardcore</div>
+            <div class="descrição">Creatina Hardcore</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Creatina Hardcore', 'R$ 71,99', 'img/Imagens Fefe/creatina.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/nutrex creatina.webp" alt="Produto 4">
+            <div class="produ-name">Creatina Monoidratada</div>
+            <div class="descrição">Uma substância natural do corpo, que ajuda a aumentar a produção de energia nos músculos para melhorar a força</div>
+            <div class="preço">R$71,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Creatina Monoidratada', 'R$ 71,99', 'img/Imagens Fefe/nutrex creatina.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/imagens/rexonamen.jpg" alt="Produto 4">
+            <div class="produ-name">Rexona Aerosol Men</div>
+            <div class="descrição">Desodorante Antitranspirante Aerosol Men</div>
+            <div class="preço">R$21,29</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Rexona Aerosol Men', 'R$ 21,29', 'img/imagens/rexonamen.jpg')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/imagens/rexonawomen.webp" alt="Produto 4">
+            <div class="produ-name">Rexona Aerosol Women</div>
+            <div class="descrição">Desodorante Antitranspirante Aerosol Rexona Women</div>
+            <div class="preço">R$21,09</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Rexona Aerosol Women', 'R$ 21,09', 'img/imagens/rexonawomen.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Fefe/desodorante creme vanilla herbissimo 5,90.webp" alt="Produto 4">
+            <div class="produ-name">Herbissimo</div>
+            <div class="descrição">Desodorante Creme Vanilla 55g</div>
+            <div class="preço">R$5,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Herbissimo', 'R$ 5,90', 'img/Imagens Fefe/desodorante creme vanilla herbissimo 5,90.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/mamadeira kuka rosa.webp" alt="Produto 4">
+            <div class="produ-name">Mamadeira Kuka Rosa</div>
+            <div class="descrição">Mamadeira Retrô - Bico Redondo 240ml - Rosa</div>
+            <div class="preço">R$29,98</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Mamadeira Kuka Rosa', 'R$ 29,98', 'img/Imagens Brubru/mamadeira kuka rosa.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/mamadeira mam rosa.webp" alt="Produto 4">
+            <div class="produ-name">Mamadeira MAM</div>
+            <div class="descrição">Mamadeira Easy Start Anticólica Rosa 130ml</div>
+            <div class="preço">R$ 58,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Mamadeira MAM', 'R$ 58,99', 'img/Imagens Brubru/mamadeira mam rosa.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/mamadeira mam.webp" alt="Produto 4">
+            <div class="produ-name">Mamadeira Easy</div>
+            <div class="descrição">Mamadeira Easy Active 270ml</div>
+            <div class="preço">R$59,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Mamadeira Easy', 'R$ 59,90', 'img/Imagens Brubru/mamadeira mam.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/mamadeira tubarao.webp" alt="Produto 4">
+            <div class="produ-name">NUK Mamadeira</div>
+            <div class="descrição">NUK Mamadeira My1St S1 Boy 150ml</div>
+            <div class="preço">R$35,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('NUK Mamadeira', 'R$ 35,99', 'img/Imagens Brubru/mamadeira tubarao.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Prendedor de chupeta animais.webp" alt="Produto 4">
+            <div class="produ-name">Buba Baby</div>
+            <div class="descrição">Prendedor de Chupeta Buba Baby Animais</div>
+            <div class="preço">R$11,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Buba Baby', 'R$ 11,99', 'img/Imagens Brubru/Prendedor de chupeta animais.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Prendedor de Chupeta Buba Baby Corações.webp" alt="Produto 4">
+            <div class="produ-name">Buba Baby Corações</div>
+            <div class="descrição">Prendedor de Chupeta Buba Baby Corações</div>
+            <div class="preço">R$11,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Buba Baby Corações', 'R$ 11,99', 'img/Imagens Brubru/Prendedor de Chupeta Buba Baby Corações.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/CHUPETA DE SILICONE KUKA BICO SOFT ORTODôNTICA FASE-1.webp" alt="Produto 4">
+            <div class="produ-name">Chupeta de Silicone Kuka</div>
+            <div class="descrição">Chupeta de Silicone Kuka Bico Soft</div>
+            <div class="preço">R$32,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Chupeta de Silicone Kuka', 'R$ 32,90', 'img/Imagens Brubru/CHUPETA DE SILICONE KUKA BICO SOFT ORTODôNTICA FASE-1.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/CHUPETA PREMIUM KUKA BICO DE SILICONE ORTO ROSA N-2.webp" alt="Produto 4">
+            <div class="produ-name">Chupeta Premium Kuka</div>
+            <div class="descrição">Chupeta Premium Bico de Silicone Rosa</div>
+            <div class="preço">R$35,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Chupeta Premium Kuka', 'R$ 35,99', 'img/Imagens Brubru/CHUPETA PREMIUM KUKA BICO DE SILICONE ORTO ROSA N-2.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Fralda Calça Pampers Pants Ajuste Total XG 86 unidades.webp" alt="Produto 4">
+            <div class="produ-name">Fralda Calça Pampers</div>
+            <div class="descrição">Fralda Calça Pampers Pants Ajuste Total XG 86 unidades</div>
+            <div class="preço">R$171,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Fralda Calça Pampers', 'R$ 171,90', 'img/Imagens Brubru/Fralda Calça Pampers Pants Ajuste Total XG 86 unidades.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Hastes Flexíveis Cotonetes 150 Unidades.webp" alt="Produto 4">
+            <div class="produ-name">Hastes Cotonetes Flexíveis</div>
+            <div class="descrição">Hastes Flexíveis Cotonetes 150 Unidades</div>
+            <div class="preço">R$25,50</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Hastes Flexíveis Cotonetes', 'R$ 25,50', 'img/Imagens Brubru/Hastes Flexíveis Cotonetes 150 Unidades.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Lenço Umedecido Johnsons Baby Recém-Nascido Hipoalergênico Sem Álcool 96 unidades.webp" alt="Produto 4">
+            <div class="produ-name">Lenço Umedecido Johnsons</div>
+            <div class="descrição">Lenço Umedecido Johnson's Baby Recém-Nascido Hipoalergênico Sem Álcool</div>
+            <div class="preço">R$29,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Lenço Umedecido Johnsons', 'R$ 95,99', 'img/Imagens Brubru/Lenço Umedecido Johnsons Baby Recém-Nascido Hipoalergênico Sem Álcool 96 unidades.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Sabonete Líquido de Glicerina Granado Bebê Tradicional com 250ml.webp" alt="Produto 4">
+            <div class="produ-name">Sabonete Líquido de Glicerina Granado</div>
+            <div class="descrição">Sabonete Líquido de Glicerina Granado Bebê Tradicional com 250ml</div>
+            <div class="preço">R$30,90</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Sabonete Líquido de Glicerina Granado', 'R$ 30,90', 'img/Imagens Brubru/Sabonete Líquido de Glicerina Granado Bebê Tradicional com 250ml.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Shampoo Infantil Johnsons Baby Regular 400m.webp" alt="Produto 4">
+            <div class="produ-name">Shampoo Infantil Johnsons</div>
+            <div class="descrição">Shampoo Infantil Johnson's Baby Regular 400ml</div>
+            <div class="preço">R$28,89</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Shampoo Infantil Johnsons', 'R$ 28,89', 'img/Imagens Brubru/Shampoo Infantil Johnsons Baby Regular 400m.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Brubru/Óleo Johnsons Baby Regular Hidrata e Amacia com 200ml.webp" alt="Produto 4">
+            <div class="produ-name">Óleo Johnsons Baby</div>
+            <div class="descrição">Óleo Johnson's Baby Regular Hidrata e Amacia com 200ml</div>
+            <div class="preço">R$47,99</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Óleo Johnsons Baby', 'R$ 47,99', 'img/Imagens Brubru/Óleo Johnsons Baby Regular Hidrata e Amacia com 200ml.webp')">
+                    Adicionar ao carrinho</button>
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/Baby_Balm_50g_jar_open.Final_Color_Output.0000_840.png" alt="Produto 4">
+            <div class="produ-name">Vick Babyrub</div>
+            <div class="descrição">Vick babyrub balsamo para Bebes 50g</div>
+            <div class="preço">R$ 84,00</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Vick Babyrub', 'R$ 84,00', 'img/Imagens Lelê/Baby_Balm_50g_jar_open.Final_Color_Output.0000_840.png')">
+                    Adicionar ao Carrinho</button>
+                </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Imagens Lelê/D_NQ_NP_712215-MLB83232651781_032025-O.webp" alt="Produto 4">
+            <div class="produ-name">Hipoglós</div>
+            <div class="descrição">Creme Preventivo De Assaduras, 120g</div>
+            <div class="preço">R$53,50</div>
+            <a href="carrinho.html">
+                <button onclick="addToCart('Hipoglós', 'R$ 53,50', 'img/Imagens Lelê/D_NQ_NP_712215-MLB83232651781_032025-O.webp')">
+                    Adicionar ao Carrinho</button>
+            </a>
+        </div>
+        </div>
+                
+        <footer class="footer">
+            <p class="copy">&copy; 2024 Essência Pharma. Todos os direitos reservados.</p>
+        </footer>
+        
+
+            <!--SCRIPT PRO CARRINHO-->
+        <script>
+            function addToCart(nome, preco, imagem) {
+                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        
+                // Verifica se o item já existe no carrinho
+                const index = carrinho.findIndex(item => item.nome === nome);
+        
+                if (index !== -1) {
+                    // Se já existe, incrementa a quantidade
+                    carrinho[index].quantidade = (carrinho[index].quantidade || 1) + 1;
+                } else {
+                    // Se não existe, adiciona com quantidade 1
+                    carrinho.push({
+                        nome: nome,
+                        preco: preco,
+                        imagem: imagem,
+                        quantidade: 1
+                    });
+                }
+        
+                // Salva no localStorage
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        
+                // Alerta de sucesso (você pode trocar por um toast)
+                alert(`${nome} foi adicionado ao carrinho!`);
+            }
+        </script>   
+</body>
+</html>

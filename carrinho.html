@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- INÍCIO DO CABEÇALHO -->
+    <header class="header">
+        <div> <a href="index.html" class="logo"> <img src="img/Logo.jpg" alt="Logo"> </a> </div>
+
+        <nav class="menu">
+            <div class="hover">
+                <p>
+                    <a href="index.html" title="Página Inicial">HOME</a>
+                    <a href="sobre.html" title="Sobre">SOBRE</a>
+                    <a href="produtos.html" title="Produtos">PRODUTOS</a>
+                </p>
+            </div>
+        </nav>
+    
+    <!-- ÍCONE DA HEADER -->
+        <div class="icons">
+            <a class="social" href="cadastro.html" title="Login"><i class="fas fa-user"></i></a>
+            <a class="social" href="pesquisa.html" title="Buscar"><i class="fas fa-search"></i></a>
+            <a class="social" href="carrinho.html" title="Carrinho"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+    </header>
+
+<!-- INÍCIO DA ÁREA DE CONTEÚDO -->
+
+    <h1>Seu Carrinho</h1>
+    <div id="carrinho-container"></div>
+
+    <div id="subtotal-container">
+        <p><strong>Subtotal:</strong> <span id="subtotal">R$ 0,00</span></p>
+    </div>
+
+    <div class="acoes">
+        <button onclick="finalizarCompra()">Ir para pagamento</button>
+        <button onclick="continuarComprando()">Continuar comprando</button>
+    </div>
+
+    <!-- COMEÇO DO SCRIPT -->
+
+    <script>
+        function carregarCarrinho() {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const container = document.getElementById('carrinho-container');
+            const subtotalEl = document.getElementById('subtotal');
+    
+            container.innerHTML = '';
+            let subtotal = 0;
+    
+            if (carrinho.length === 0) {
+                container.innerHTML = '<p>Seu carrinho está vazio.</p>';
+                subtotalEl.textContent = 'R$ 0,00';
+                return;
+            }
+    
+            carrinho.forEach((item, index) => {
+                // Garante que o preço seja um número
+                const precoLimpo = item.preco.replace('R$', '').trim().replace(',', '.');
+                const precoNum = parseFloat(precoLimpo);
+    
+                if (isNaN(precoNum)) {
+                    console.warn(`Preço inválido para o item "${item.nome}":`, item.preco);
+                    return;
+                }
+    
+                const totalProduto = precoNum * item.quantidade;
+                subtotal += totalProduto;
+    
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item-carrinho';
+                itemDiv.innerHTML = `
+                    <img src="${item.imagem}" alt="${item.nome}" width="60" onerror="this.src='img/imagens/placeholder.jpg'">
+                    <div>
+                        <strong>${item.nome}</strong><br>
+                        <small>Preço unitário: ${item.preco}</small><br>
+                        <label>Qtd:
+                            <input type="number" min="1" value="${item.quantidade}" onchange="alterarQuantidade(${index}, this.value)">
+                        </label>
+                        <p>Total: R$ ${totalProduto.toFixed(2).replace('.', ',')}</p>
+                        <button onclick="removerItem(${index})">Remover</button>
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+    
+            subtotalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+        }
+    
+        function alterarQuantidade(index, novaQtd) {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho[index].quantidade = parseInt(novaQtd);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            carregarCarrinho();
+        }
+    
+        function removerItem(index) {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.splice(index, 1);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            carregarCarrinho();
+        }
+    
+        function continuarComprando() {
+            window.location.href = 'produtos.html';
+        }
+    
+        function finalizarCompra() {
+            alert("Pagamento realizado com sucesso.");
+        }
+    
+        window.onload = carregarCarrinho;
+    </script>
+      
+</body>
+</html>
